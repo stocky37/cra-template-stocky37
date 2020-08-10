@@ -1,6 +1,13 @@
 {
 	"extends": ["react-app", "airbnb", "prettier", "prettier/react"],
 	"plugins": ["simple-import-sort"],
+	"settings": {
+		"import/resolver": {
+			"node": {
+				"paths": ["src", "node_modules"]
+			}
+		}
+	},
 	"rules": {
 		"react/jsx-filename-extension": ["warn", {"extensions": [".js", ".jsx"]}],
 		"simple-import-sort/sort": "error",
