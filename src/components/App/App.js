@@ -12,7 +12,7 @@ function App() {
 			<header className="App-header">
 				<img src={logo} className="App-logo" alt="logo" />
 				<Routes>
-					<Route path="/:name">
+					<Route path="/:nameId">
 						<Hello />
 					</Route>
 				</Routes>
