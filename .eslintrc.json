@@ -11,6 +11,7 @@
 	"rules": {
 		"react/jsx-filename-extension": ["warn", {"extensions": [".js", ".jsx"]}],
 		"simple-import-sort/sort": "error",
-		"sort-imports": "off"
+		"sort-imports": "off",
+		"react/jsx-props-no-spreading": "off"
 	}
 }
