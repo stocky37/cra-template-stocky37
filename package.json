@@ -8,13 +8,18 @@
 		"template.json"
 	],
 	"scripts": {
+		"clean": "node bin/clean.js",
+		"prebuild": "npm run clean",
+		"build": "node bin/build.js",
 		"preprettier": "prettier-package-json --write",
 		"preprettier:check": "prettier-package-json -l",
 		"prettier": "prettier --write .",
 		"prettier:check": "prettier --check ."
 	},
 	"devDependencies": {
+		"fs-extra": "^9.0.1",
 		"husky": "^4.2.5",
+		"ignore": "^5.1.8",
 		"lint-staged": "^10.2.11",
 		"prettier": "^2.0.5",
 		"prettier-package-json": "^2.1.3",
