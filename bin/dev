@@ -1,0 +1,9 @@
+#!/bin/bash
+
+SCRIPT_DIR="$(dirname "${BASH_SOURCE[0]}")"
+source "$SCRIPT_DIR/vars"
+
+port=3000
+
+"$RUNTIME" build -t "$DEV_IMAGE_NAME" "$PROJECT_DIR/docker/development"
+"$RUNTIME" run --rm --name "$DEV_IMAGE_NAME" -ti -v .:/opt/app-root/src/app:Z -p "$port:$port" "$DEV_IMAGE_NAME"

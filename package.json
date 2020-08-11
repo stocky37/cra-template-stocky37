@@ -4,7 +4,8 @@
 	"private": true,
 	"dependencies": {
 		"react": "^16.13.1",
-		"react-dom": "^16.13.1"
+		"react-dom": "^16.13.1",
+		"react-scripts": "3.4.1"
 	},
 	"devDependencies": {
 		"@testing-library/jest-dom": "^4.2.4",
@@ -16,8 +17,7 @@
 		"husky": "^4.2.5",
 		"lint-staged": "^10.2.11",
 		"prettier": "^2.0.5",
-		"pretty-quick": "^2.0.1",
-		"react-scripts": "3.4.1"
+		"pretty-quick": "^2.0.1"
 	},
 	"scripts": {
 		"start": "react-scripts start",

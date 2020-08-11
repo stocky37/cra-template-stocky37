@@ -1,0 +1,9 @@
+PROJECT_DIR=$(realpath "$SCRIPT_DIR/..")
+
+IMAGE_NAME=react-app
+DEV_IMAGE_NAME="${IMAGE_NAME}-dev"
+if command -v podman >/dev/null 2>&1; then
+  RUNTIME=podman
+else
+  RUNTIME=docker
+fi
