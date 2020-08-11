@@ -1,6 +1,8 @@
 import './App.css';
 
+import Hello from 'components/Hello';
 import React from 'react';
+import {Route, Routes} from 'react-router';
 
 import logo from './logo.svg';
 
@@ -9,6 +11,11 @@ function App() {
 		<div className="App">
 			<header className="App-header">
 				<img src={logo} className="App-logo" alt="logo" />
+				<Routes>
+					<Route path="/:name">
+						<Hello />
+					</Route>
+				</Routes>
 				<p>
 					Edit <code>src/App.js</code> and save to reload.
 				</p>
