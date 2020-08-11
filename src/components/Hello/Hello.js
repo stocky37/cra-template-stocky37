@@ -16,4 +16,6 @@ const Hello = () => {
 	return <p>Hello, {name || nameId}!</p>;
 };
 
+Hello.whyDidYouRender = true;
+
 export default Hello;
