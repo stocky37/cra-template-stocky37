@@ -1,0 +1,64 @@
+{
+	"private": true,
+	"name": "cra-template-stocky37",
+	"version": "0.1.0",
+	"scripts": {
+		"preapi": "cp api/db.json api/live.json",
+		"api": "json-server -p 8080 api/live.json",
+		"api:save": "cp api/live.json api/db.json",
+		"build": "react-scripts build",
+		"eject": "react-scripts eject",
+		"lint": "eslint src/ --ext .js,.jsx",
+		"lint:fix": "npm run lint -- --fix",
+		"preprettier": "prettier-package-json --write",
+		"preprettier:check": "prettier-package-json -l",
+		"start": "react-scripts start",
+		"test": "react-scripts test",
+		"prettier": "prettier --write .",
+		"prettier:check": "prettier --check ."
+	},
+	"dependencies": {
+		"history": "^5.0.0",
+		"react": "^16.13.1",
+		"react-dom": "^16.13.1",
+		"react-router": "^6.0.0-beta.0",
+		"react-router-dom": "^6.0.0-beta.0",
+		"react-scripts": "3.4.1"
+	},
+	"devDependencies": {
+		"@testing-library/jest-dom": "^4.2.4",
+		"@testing-library/react": "^9.5.0",
+		"@testing-library/user-event": "^7.2.1",
+		"@welldone-software/why-did-you-render": "^4.3.0",
+		"eslint-config-airbnb": "^18.2.0",
+		"eslint-config-prettier": "^6.11.0",
+		"eslint-plugin-simple-import-sort": "^5.0.3",
+		"husky": "^4.2.5",
+		"json-server": "^0.16.1",
+		"lint-staged": "^10.2.11",
+		"prettier": "^2.0.5",
+		"prettier-package-json": "^2.1.3",
+		"pretty-quick": "^2.0.1"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged && pretty-quick --staged"
+		}
+	},
+	"lint-staged": {
+		"*.{js,jsx}": "eslint --fix",
+		"package.json": "prettier-package-json --write"
+	}
+}
