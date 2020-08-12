@@ -3,11 +3,23 @@
 const path = require('path');
 const fs = require('fs-extra');
 const ignore = require('ignore');
+const dotProp = require('dot-prop');
 
 const ignorer = ignore().add(['node_modules', 'package*.json', '.idea', 'api/live.json']);
 const renames = {
 	'.gitignore': 'gitignore',
 };
+
+filteredKeys = [
+	'name',
+	'private',
+	'version',
+	'description',
+	'browsersList',
+	'dependencies.react-scripts',
+	'dependencies.react',
+	'dependencies.react-dom',
+];
 
 async function copyTemplateFiles(appDir, templateDir) {
 	return fs.copy(appDir, templateDir, {
@@ -24,10 +36,18 @@ async function applyRenames(rootDir) {
 	return Promise.all(promises);
 }
 
+function templateFromPackage(pkg) {
+	const filtered = {...pkg};
+	filteredKeys.forEach((key) => dotProp.delete(filtered, key));
+	return {
+		package: filtered,
+	};
+}
+
 async function createTemplateJson(appDir, buildDir) {
 	return fs
 		.readJson(path.join(appDir, 'package.json'))
-		.then((pkg) => fs.writeJson(path.join(buildDir, 'template.json'), {package: pkg}, {spaces: '\t'}));
+		.then((pkg) => fs.writeJson(path.join(buildDir, 'template.json'), templateFromPackage(pkg), {spaces: '\t'}));
 }
 
 function createTemplate(appDir = 'app', buildDir = 'build') {
