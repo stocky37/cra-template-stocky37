@@ -24,9 +24,16 @@ async function applyRenames(rootDir) {
 	return Promise.all(promises);
 }
 
+async function createTemplateJson(appDir, templateDir) {
+	return fs
+		.readJson(path.join(appDir, 'package.json'))
+		.then((pkg) => fs.writeJson(path.resolve(templateDir, '../template.json'), {package: pkg}, {spaces: '\t'}));
+}
+
 function createTemplate(appDir = 'app', templateDir = 'template') {
 	copyTemplateFiles(appDir, templateDir).then(async () => {
-		await applyRenames(templateDir);
+		applyRenames(templateDir).then();
+		createTemplateJson(appDir, templateDir).then();
 	});
 }
 

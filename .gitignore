@@ -1,4 +1,5 @@
 template/
+template.json
 
 # dependencies
 node_modules/
