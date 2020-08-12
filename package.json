@@ -1,14 +1,14 @@
 {
-	"name": "cra-template",
-	"description": "The base template for Create React App.",
+	"name": "cra-template-stocky37",
+	"description": "Base CRA template for GitHub user stocky37.",
 	"license": "MIT",
 	"version": "0.1.0",
 	"files": [
-		"template",
-		"template.json"
+		"build/template",
+		"build/template.json"
 	],
 	"scripts": {
-		"clean": "node bin/clean.js",
+		"clean": "rm -rf build",
 		"prebuild": "npm run clean",
 		"build": "node bin/build.js",
 		"preprettier": "prettier-package-json --write",
