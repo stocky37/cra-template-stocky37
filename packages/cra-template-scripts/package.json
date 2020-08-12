@@ -1,0 +1,16 @@
+{
+	"name": "cra-template-scripts",
+	"version": "0.1.0",
+	"bin": {
+		"cra-template-scripts": "bin/cra-template-scripts.js"
+	},
+	"files": [
+		"bin",
+		"lib"
+	],
+	"dependencies": {
+		"dot-prop": "^5.2.0",
+		"fs-extra": "^9.0.1",
+		"ignore": "^5.1.8"
+	}
+}

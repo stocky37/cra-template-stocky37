@@ -1,43 +1,22 @@
 {
-	"name": "cra-template-stocky37",
+	"private": true,
+	"name": "cra-templates-stocky37",
 	"description": "Base CRA template for GitHub user stocky37.",
 	"license": "MIT",
 	"version": "0.1.0",
-	"files": [
-		"build/template",
-		"build/template.json"
-	],
-	"main": "build/template.json",
 	"scripts": {
-		"clean": "rm -rf build",
-		"prebuild": "npm run clean",
-		"build": "node bin/build.js",
-		"preprettier": "prettier-package-json --write",
-		"preprettier:check": "prettier-package-json -l",
-		"prettier": "prettier --write .",
-		"prettier:check": "prettier --check ."
+		"preformat": "prettier-package-json --write **/package.json",
+		"format": "prettier --write .",
+		"preformat:check": "prettier-package-json -l",
+		"format:check": "prettier --check ."
 	},
 	"devDependencies": {
-		"fs-extra": "^9.0.1",
 		"husky": "^4.2.5",
-		"ignore": "^5.1.8",
+		"lerna": "^3.22.1",
 		"lint-staged": "^10.2.11",
 		"prettier": "^2.0.5",
 		"prettier-package-json": "^2.1.3",
 		"pretty-quick": "^2.0.1"
-	},
-	"keywords": [
-		"airbnb",
-		"create-react-app",
-		"eslint",
-		"json-server",
-		"prettier",
-		"react",
-		"react-router",
-		"template"
-	],
-	"engines": {
-		"node": ">=10"
 	},
 	"husky": {
 		"hooks": {

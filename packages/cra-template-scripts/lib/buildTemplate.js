@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 const path = require('path');
 const fs = require('fs-extra');
 const ignore = require('ignore');
@@ -56,12 +54,14 @@ async function createTemplateJson(appDir, buildDir) {
 		.then((pkg) => fs.writeJson(path.join(buildDir, 'template.json'), templateFromPackage(pkg), {spaces: '\t'}));
 }
 
-function createTemplate(appDir = 'app', buildDir = 'build') {
+async function createTemplate(appDir = 'app', buildDir = 'build') {
 	const templateDir = path.join(buildDir, 'template');
-	copyTemplateFiles(appDir, templateDir).then(async () => {
-		applyRenames(templateDir).then();
-	});
-	createTemplateJson(appDir, buildDir).then();
+	return Promise.all([
+		copyTemplateFiles(appDir, templateDir).then(async () => {
+			applyRenames(templateDir).then();
+		}),
+		createTemplateJson(appDir, buildDir).then(),
+	]);
 }
 
-createTemplate();
+module.exports = createTemplate;
