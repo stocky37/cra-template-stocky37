@@ -6,7 +6,7 @@
 	},
 	"files": [
 		"bin",
-		"lib"
+		"scripts"
 	],
 	"dependencies": {
 		"dot-prop": "^5.2.0",
