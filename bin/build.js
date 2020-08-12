@@ -40,7 +40,13 @@ function templateFromPackage(pkg) {
 	const filtered = {...pkg};
 	filteredKeys.forEach((key) => dotProp.delete(filtered, key));
 	return {
-		package: filtered,
+		package: {
+			...filtered,
+			dependencies: {
+				...filtered.dependencies,
+				...filtered.devDependencies,
+			},
+		},
 	};
 }
 
