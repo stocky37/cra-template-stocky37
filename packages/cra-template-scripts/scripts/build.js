@@ -55,5 +55,5 @@ async function sourceFromPackageJson(packageJsonPath, destPath, mapFunc = (pkg) 
 Promise.all([
 	copyTemplateFiles(paths.appPath, paths.templateBuild).then(async () => applyRenames(paths.templateBuild)),
 	sourceFromPackageJson(paths.appPackageJson, paths.templateJson, buildTemplateJson),
-	sourceFromPackageJson(paths.appPackageJson, paths.templatePackageJson, buildTemplatePackageJson),
+	// sourceFromPackageJson(paths.appPackageJson, paths.templatePackageJson, buildTemplatePackageJson),
 ]).then();
