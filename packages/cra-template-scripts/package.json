@@ -1,9 +1,7 @@
 {
 	"name": "cra-template-scripts",
 	"version": "0.1.0",
-	"bin": {
-		"cra-template-scripts": "bin/cra-template-scripts.js"
-	},
+	"bin": "bin/cra-template-scripts.js",
 	"files": [
 		"bin",
 		"config",
