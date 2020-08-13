@@ -3,4 +3,5 @@ package-lock.json
 **/src/serviceWorker.js
 **/api/live.json
 .yarn/
+.yarnrc.yml
 .pnp.js
