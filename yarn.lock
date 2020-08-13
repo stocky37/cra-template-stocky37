@@ -4562,7 +4562,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cra-template-scripts@^0.1.0, cra-template-scripts@workspace:packages/cra-template-scripts":
+"cra-template-scripts@^0.1.1, cra-template-scripts@workspace:packages/cra-template-scripts":
   version: 0.0.0-use.local
   resolution: "cra-template-scripts@workspace:packages/cra-template-scripts"
   dependencies:
@@ -4572,12 +4572,6 @@ __metadata:
     react-dev-utils: ^10.2.1
   bin:
     cra-template-scripts: bin/cra-template-scripts.js
-  languageName: unknown
-  linkType: soft
-
-"cra-template-stocky37@workspace:packages/template-stocky37/dist":
-  version: 0.0.0-use.local
-  resolution: "cra-template-stocky37@workspace:packages/template-stocky37/dist"
   languageName: unknown
   linkType: soft
 
@@ -14319,7 +14313,7 @@ resolve@1.1.7:
     "@testing-library/react": ^9.5.0
     "@testing-library/user-event": ^7.2.1
     "@welldone-software/why-did-you-render": ^4.3.0
-    cra-template-scripts: ^0.1.0
+    cra-template-scripts: ^0.1.1
     eslint-config-airbnb: ^18.2.0
     eslint-config-prettier: ^6.11.0
     eslint-plugin-simple-import-sort: ^5.0.3

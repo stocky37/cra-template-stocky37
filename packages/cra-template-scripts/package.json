@@ -11,7 +11,7 @@
 	"bugs": {
 		"url": "https://github.com/stocky37/cra-templates/issues"
 	},
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"bin": "bin/cra-template-scripts.js",
 	"files": [
 		"bin",
