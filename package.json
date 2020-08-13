@@ -1,18 +1,16 @@
 {
 	"private": true,
 	"name": "cra-templates-stocky37",
-	"description": "Base CRA template for GitHub user stocky37.",
-	"license": "MIT",
 	"version": "0.1.0",
 	"workspaces": [
-		"packages/*"
+		"packages/*",
+		"packages/template-*/dist"
 	],
 	"scripts": {
-		"preformat": "prettier-package-json --write **/package.json",
-		"format": "prettier --write .",
-		"preformat:check": "prettier-package-json -l",
-		"format:check": "prettier --check .",
-		"publish": "yarn npm publish"
+		"build": "yarn workspaces foreach -v --include 'template-*' run build:template && yarn",
+		"format": "prettier-package-json --use-tabs --write **/package.json && prettier --write .",
+		"format:check": "prettier-package-json --use-tabs -l && prettier --check . ",
+		"publish": "yarn workspaces foreach -v --include 'cra-template-*' npm publish"
 	},
 	"devDependencies": {
 		"husky": "^4.2.5",

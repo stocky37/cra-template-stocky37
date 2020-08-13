@@ -221,18 +221,14 @@ module.exports = {
 								[i, s]
 							);
 						}
-						(g.schema = d
-							.object()
-							.shape({
-								jobs: d.number().min(2),
-								parallel: d
-									.boolean()
-									.when('jobs', {
-										is: (e) => e > 1,
-										then: d.boolean().oneOf([!0], '--parallel must be set when using --jobs'),
-										otherwise: d.boolean(),
-									}),
-							})),
+						(g.schema = d.object().shape({
+							jobs: d.number().min(2),
+							parallel: d.boolean().when('jobs', {
+								is: (e) => e > 1,
+								then: d.boolean().oneOf([!0], '--parallel must be set when using --jobs'),
+								otherwise: d.boolean(),
+							}),
+						})),
 							(g.usage = s.Command.Usage({
 								category: 'Workspace-related commands',
 								description: 'run a command on all workspaces',

@@ -1,26 +1,19 @@
 {
-	"name": "cra-template-stocky37",
+	"private": true,
+	"name": "template-stocky37",
 	"version": "0.1.0",
-	"main": "dist/template.json",
-	"files": [
-		"dist/template/**"
-	],
 	"scripts": {
-		"preapi": "cp api/db.json api/live.json",
-		"api": "json-server -p 8080 api/live.json",
+		"api": "cp api/db.json api/live.json && json-server -p 8080 api/live.json",
 		"api:save": "cp api/live.json api/db.json",
 		"build": "react-scripts build",
 		"build:template": "cra-template-scripts build",
 		"eject": "react-scripts eject",
+		"format": "prettier-package-json --write && prettier --write .",
+		"format:check": "prettier-package-json -l && prettier --check .",
 		"lint": "eslint src/ --ext .js,.jsx",
 		"lint:fix": "yarn lint --fix",
-		"prepack": "rm -rf dist && yarn build:template",
-		"preprettier": "prettier-package-json --write",
-		"preprettier:check": "prettier-package-json -l",
 		"start": "react-scripts start",
-		"test": "react-scripts test",
-		"prettier": "prettier --write .",
-		"prettier:check": "prettier --check ."
+		"test": "react-scripts test"
 	},
 	"dependencies": {
 		"history": "^5.0.0",
