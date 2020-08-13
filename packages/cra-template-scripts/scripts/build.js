@@ -24,9 +24,9 @@ async function applyRenames(srcPath) {
 	return Promise.all(promises);
 }
 
-function templateFromPackage(packageJson) {
+function buildTemplateJson(packageJson) {
 	const filtered = {...packageJson};
-	filters.packageJsonKeys.forEach((key) => dotProp.delete(filtered, key));
+	filters.templateJsonKeys.forEach((key) => dotProp.delete(filtered, key));
 	return {
 		package: {
 			...filtered,
@@ -38,13 +38,22 @@ function templateFromPackage(packageJson) {
 	};
 }
 
-async function createTemplateJson(packageJsonPath, templateJsonPath) {
-	return fs
-		.readJson(packageJsonPath)
-		.then((pkg) => fs.writeJson(templateJsonPath, templateFromPackage(pkg), {spaces: 2}));
+function buildTemplatePackageJson(packageJson) {
+	const filtered = {...packageJson};
+	filters.packageJsonKeys.forEach((key) => dotProp.delete(filtered, key));
+	return {
+		...filtered,
+		files: ['template', 'template.json'],
+		main: 'template.json',
+	};
+}
+
+async function sourceFromPackageJson(packageJsonPath, destPath, mapFunc = (pkg) => pkg) {
+	return fs.readJson(packageJsonPath).then((pkg) => fs.writeJson(destPath, mapFunc(pkg), {spaces: 2}));
 }
 
 Promise.all([
 	copyTemplateFiles(paths.appPath, paths.templateBuild).then(async () => applyRenames(paths.templateBuild)),
-	createTemplateJson(paths.appPackageJson, paths.templateJson),
+	sourceFromPackageJson(paths.appPackageJson, paths.templateJson, buildTemplateJson),
+	sourceFromPackageJson(paths.appPackageJson, paths.templatePackageJson, buildTemplatePackageJson),
 ]).then();

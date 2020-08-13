@@ -10,4 +10,5 @@ module.exports = {
 	dist: resolveApp('dist'),
 	templateBuild: resolveApp('dist/template'),
 	templateJson: resolveApp('dist/template.json'),
+	templatePackageJson: resolveApp('dist/package.json'),
 };

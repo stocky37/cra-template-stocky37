@@ -1,5 +1,5 @@
 module.exports = {
-	packageJsonKeys: [
+	templateJsonKeys: [
 		'name',
 		'private',
 		'version',
@@ -11,5 +11,6 @@ module.exports = {
 		'devDependencies.cra-template-scripts',
 		'scripts.build:template',
 	],
+	packageJsonKeys: ['scripts', 'dependencies', 'devDependencies', 'browserslist', 'husky', 'lint-staged'],
 	ignored: ['node_modules', 'package*.json', '.idea', 'api/live.json', 'dist'],
 };
