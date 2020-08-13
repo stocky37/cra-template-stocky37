@@ -8,16 +8,18 @@ const filters = require('../config/filters');
 
 async function copyTemplateFiles(srcPath, destPath) {
 	const ignorer = ignore().add(filters.ignored);
-	return fs.copy(srcPath, destPath, {
-		dereference: true,
-		filter: ignorer.createFilter(),
-	});
+	const filter = ignorer.createFilter();
+	const files = fs.readdirSync(srcPath);
+
+	return Promise.all(
+		files.filter(filter).map((src) => fs.copy(src, path.join(destPath, src), {dereference: true, filter}))
+	);
 }
 
 async function applyRenames(srcPath) {
 	const promises = [];
 	Object.keys(renames).forEach((key) => {
-		promises.push(fs.move(path.join(srcPath, key), path.join(srcPath, renames[key])));
+		promises.push(fs.move(path.join(srcPath, key), path.join(srcPath, renames[key]), {overwrite: true}));
 	});
 	return Promise.all(promises);
 }

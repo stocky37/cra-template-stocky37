@@ -9,5 +9,5 @@ module.exports = {
 		'dependencies.react',
 		'dependencies.react-dom',
 	],
-	ignored: ['node_modules', 'package*.json', '.idea', 'api/live.json'],
+	ignored: ['node_modules', 'package*.json', '.idea', 'api/live.json', 'dist'],
 };
