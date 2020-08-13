@@ -1,5 +1,16 @@
 {
 	"name": "cra-template-scripts",
+	"description": "Scripts to help generate cra-templates from running CRA applications.",
+	"license": "MIT",
+	"author": "Tom Stockwell <stocky37@stockwells.me> (https://github.com/stocky37)",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/stocky37/cra-templates.git",
+		"directory": "packages/cra-template-scripts"
+	},
+	"bugs": {
+		"url": "https://github.com/stocky37/cra-templates/issues"
+	},
 	"version": "0.1.0",
 	"bin": "bin/cra-template-scripts.js",
 	"files": [
@@ -12,5 +23,13 @@
 		"fs-extra": "^9.0.1",
 		"ignore": "^5.1.8",
 		"react-dev-utils": "^10.2.1"
+	},
+	"keywords": [
+		"create-react-app",
+		"react",
+		"template"
+	],
+	"engines": {
+		"node": ">=10"
 	}
 }

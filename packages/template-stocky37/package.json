@@ -1,6 +1,17 @@
 {
 	"private": true,
 	"name": "template-stocky37",
+	"description": "CRA template that includes some opinionated best practices.",
+	"license": "MIT",
+	"author": "Tom Stockwell <stocky37@stockwells.me> (https://github.com/stocky37)",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/stocky37/cra-templates.git",
+		"directory": "packages/template-stocky37"
+	},
+	"bugs": {
+		"url": "https://github.com/stocky37/cra-templates/issues"
+	},
 	"version": "0.1.0",
 	"scripts": {
 		"api": "cp api/db.json api/live.json && json-server -p 8080 api/live.json",
@@ -38,6 +49,14 @@
 		"prettier": "^2.0.5",
 		"prettier-package-json": "^2.1.3",
 		"pretty-quick": "^2.0.1"
+	},
+	"keywords": [
+		"create-react-app",
+		"react",
+		"template"
+	],
+	"engines": {
+		"node": ">=10"
 	},
 	"browserslist": {
 		"production": [
