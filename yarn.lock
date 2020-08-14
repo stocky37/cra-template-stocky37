@@ -4594,6 +4594,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"cra-template-stocky37@workspace:packages/template-stocky37/dist":
+  version: 0.0.0-use.local
+  resolution: "cra-template-stocky37@workspace:packages/template-stocky37/dist"
+  languageName: unknown
+  linkType: soft
+
 "cra-templates-stocky37@workspace:.":
   version: 0.0.0-use.local
   resolution: "cra-templates-stocky37@workspace:."

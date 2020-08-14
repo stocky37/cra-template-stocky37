@@ -11,7 +11,7 @@
 	"bugs": {
 		"url": "https://github.com/stocky37/cra-templates/issues"
 	},
-	"version": "0.1.2",
+	"version": "0.1.1",
 	"workspaces": [
 		"packages/*",
 		"packages/template-*/dist"
@@ -30,7 +30,7 @@
 		"publish": "yarn foreach:package npm publish",
 		"release": "bash scripts/release.sh",
 		"test": "CI=true yarn foreach:child run test",
-		"version:show": "yarn node scripts/showversion.js"
+		"version:show": "yarn node scripts/showversion.js \"$INIT_CWD\""
 	},
 	"devDependencies": {
 		"concurrently": "^5.3.0",
