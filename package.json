@@ -23,12 +23,17 @@
 		"foreach:children": "yarn foreach --exclude cra-templates-stocky37",
 		"foreach:publishable": "yarn foreach --include 'cra-template-*'",
 		"foreach:templates": "yarn foreach --include 'template-*'",
+		"foreach:versionable": "yarn foreach --exclude 'cra-template-!(scripts)'",
 		"format": "prettier-package-json --use-tabs --write **/package.json && prettier --write .",
 		"format:check": "prettier-package-json --use-tabs -l && prettier --check . ",
+		"prepublish": "yarn release",
 		"publish": "yarn foreach:publishable npm publish",
-		"test": "CI=true yarn foreach:children run test"
+		"release": "bash scripts/release.sh",
+		"test": "CI=true yarn foreach:children run test",
+		"version:show": "yarn node scripts/showversion.js"
 	},
 	"devDependencies": {
+		"fs-extra": "^9.0.1",
 		"husky": "^4.2.5",
 		"lint-staged": "^10.2.11",
 		"prettier": "^2.0.5",

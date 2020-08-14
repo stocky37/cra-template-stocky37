@@ -12,7 +12,7 @@
 	"bugs": {
 		"url": "https://github.com/stocky37/cra-templates/issues"
 	},
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"scripts": {
 		"api": "cp api/db.json api/live.json && json-server -p 8080 api/live.json",
 		"api:save": "cp api/live.json api/db.json",
