@@ -1,0 +1,6 @@
+releases:
+  cra-templates-stocky37: patch
+
+undecided:
+  - cra-template-scripts
+  - template-stocky37

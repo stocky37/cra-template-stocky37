@@ -18,6 +18,7 @@
 		"api:save": "cp api/live.json api/db.json",
 		"build": "react-scripts build",
 		"build:template": "cra-template-scripts build",
+		"clean": "rm -rf dist/ build/",
 		"eject": "react-scripts eject",
 		"format": "prettier-package-json --write && prettier --write .",
 		"format:check": "prettier-package-json -l && prettier --check .",
@@ -73,6 +74,11 @@
 	"husky": {
 		"hooks": {
 			"pre-commit": "lint-staged && pretty-quick --staged"
+		}
+	},
+	"jest": {
+		"moduleNameMapper": {
+			"^components(/.*)$": "<rootDir>/src/components$1"
 		}
 	},
 	"lint-staged": {
