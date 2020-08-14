@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+  - lts/*
+
+# ref: https://gist.github.com/dennisreimann/c2a6ef58544861f7e13762e06e146dac
+cache:
+  npm: false
+  directories:
+    - ./.yarn/cache
+
+before_install:
+  - curl -o- -L https://yarnpkg.com/install.sh | bash
+  - export PATH="$HOME/.yarn/bin:$PATH"
+  - yarn -v
+
+install: yarn
+script:
+  - yarn test
+  - yarn build
