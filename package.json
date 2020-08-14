@@ -11,28 +11,29 @@
 	"bugs": {
 		"url": "https://github.com/stocky37/cra-templates/issues"
 	},
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"workspaces": [
 		"packages/*",
 		"packages/template-*/dist"
 	],
 	"scripts": {
-		"build": "yarn foreach:children run build:template && yarn",
-		"clean": "yarn foreach:children run clean && yarn",
+		"build": "yarn foreach:child run build:template && yarn",
+		"ci": "CI=TRUE concurrently -n version,test,formatting 'yarn version check' 'yarn test' 'yarn format:check'",
+		"clean": "yarn foreach:child run clean && yarn",
 		"foreach": "yarn workspaces foreach -v -p --topological-dev ",
-		"foreach:children": "yarn foreach --exclude cra-templates-stocky37",
-		"foreach:publishable": "yarn foreach --include 'cra-template-*'",
-		"foreach:templates": "yarn foreach --include 'template-*'",
-		"foreach:versionable": "yarn foreach --exclude 'cra-template-!(scripts)'",
+		"foreach:child": "yarn foreach --exclude cra-templates-stocky37",
+		"foreach:package": "yarn foreach --include 'cra-template-*'",
+		"foreach:src": "yarn foreach --exclude 'cra-template-!(scripts)'",
+		"foreach:template": "yarn foreach --include 'template-*'",
 		"format": "prettier-package-json --use-tabs --write **/package.json && prettier --write .",
 		"format:check": "prettier-package-json --use-tabs -l && prettier --check . ",
-		"prepublish": "yarn release",
-		"publish": "yarn foreach:publishable npm publish",
+		"publish": "yarn foreach:package npm publish",
 		"release": "bash scripts/release.sh",
-		"test": "CI=true yarn foreach:children run test",
+		"test": "CI=true yarn foreach:child run test",
 		"version:show": "yarn node scripts/showversion.js"
 	},
 	"devDependencies": {
+		"concurrently": "^5.3.0",
 		"fs-extra": "^9.0.1",
 		"husky": "^4.2.5",
 		"lint-staged": "^10.2.11",

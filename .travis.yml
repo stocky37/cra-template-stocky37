@@ -10,19 +10,21 @@ cache:
 branches:
   only:
     - master
+    - develop
 
 before_install:
   - curl -o- -L https://yarnpkg.com/install.sh | bash
   - export PATH="$HOME/.yarn/bin:$PATH"
   - yarn -v
 
-install: yarn install
+install: yarn
 script:
-  - yarn test
+  - yarn ci
   - yarn build
 
 deploy:
   provider: script
+  skip_cleanup: true
   script: bash scripts/release.sh
   on:
     branch: master
