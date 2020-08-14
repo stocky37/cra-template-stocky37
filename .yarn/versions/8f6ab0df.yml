@@ -1,5 +1,7 @@
 releases:
-
+  cra-template-scripts: patch
+  cra-template-stocky37: patch
+  template-stocky37: patch
 
 undecided:
   - cra-templates-stocky37
