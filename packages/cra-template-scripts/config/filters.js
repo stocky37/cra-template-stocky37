@@ -16,6 +16,7 @@ module.exports = {
 		'dependencies.react-dom',
 		'devDependencies.cra-template-scripts',
 		'scripts.build:template',
+		'scripts.clean',
 	],
 	packageJsonKeys: ['private', 'scripts', 'dependencies', 'devDependencies', 'browserslist', 'husky', 'lint-staged'],
 	ignored: ['node_modules', 'package*.json', '.idea', 'api/live.json', 'dist'],

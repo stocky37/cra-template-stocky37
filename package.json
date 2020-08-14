@@ -17,10 +17,16 @@
 		"packages/template-*/dist"
 	],
 	"scripts": {
-		"build": "yarn workspaces foreach -v --include 'template-*' run build:template && yarn",
+		"build": "yarn foreach:children run build:template && yarn",
+		"clean": "yarn foreach:children run clean && yarn",
+		"foreach": "yarn workspaces foreach -v -p --topological-dev ",
+		"foreach:children": "yarn foreach --exclude cra-templates-stocky37",
+		"foreach:publishable": "yarn foreach --include 'cra-template-*'",
+		"foreach:templates": "yarn foreach --include 'template-*'",
 		"format": "prettier-package-json --use-tabs --write **/package.json && prettier --write .",
 		"format:check": "prettier-package-json --use-tabs -l && prettier --check . ",
-		"publish": "yarn workspaces foreach -v --include 'cra-template-*' npm publish"
+		"publish": "yarn foreach:publishable npm publish",
+		"test": "CI=true yarn foreach:children run test"
 	},
 	"devDependencies": {
 		"husky": "^4.2.5",
