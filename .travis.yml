@@ -15,8 +15,7 @@ branches:
 install: yarn
 script:
   - yarn ci
-  - yarn
-  - yarn build
+  - yarn build:fresh
 
 deploy:
   provider: script
