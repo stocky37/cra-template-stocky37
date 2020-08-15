@@ -1,0 +1,26 @@
+language: node_js
+node_js:
+  - lts/*
+# ref: https://gist.github.com/dennisreimann/c2a6ef58544861f7e13762e06e146dac
+cache:
+  npm: false
+  directories:
+    - ./.yarn/cache
+
+branches:
+  only:
+    - master
+    - develop
+
+install: yarn
+script:
+  - yarn ci
+  - yarn build:fresh
+  - yarn version check
+
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: bash scripts/release.sh
+  on:
+    branch: master
