@@ -16,6 +16,7 @@ install: yarn
 script:
   - yarn ci
   - yarn build:fresh
+  - yarn version check
 
 deploy:
   provider: script

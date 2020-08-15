@@ -19,7 +19,7 @@
 	"scripts": {
 		"build": "yarn foreach:child run build:template",
 		"build:fresh": "yarn build; yarn && yarn build",
-		"ci": "CI=TRUE concurrently -n version,test,formatting 'yarn version check' 'yarn test' 'yarn format:check'",
+		"ci": "CI=TRUE concurrently -n test,formatting 'yarn test' 'yarn format:check'",
 		"clean": "yarn foreach:child run clean && yarn",
 		"foreach": "yarn workspaces foreach -v -p --topological-dev ",
 		"foreach:child": "yarn foreach:src --exclude cra-templates-stocky37",
