@@ -12,11 +12,6 @@ branches:
     - master
     - develop
 
-before_install:
-  - curl -o- -L https://yarnpkg.com/install.sh | bash
-  - export PATH="$HOME/.yarn/bin:$PATH"
-  - yarn -v
-
 install: yarn
 script:
   - yarn ci
