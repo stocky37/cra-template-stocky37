@@ -1,5 +1,5 @@
 releases:
-  cra-template-scripts: patch
-  cra-template-stocky37: patch
-  cra-templates-stocky37: patch
-  template-stocky37: patch
+  cra-template-scripts: minor
+  cra-template-stocky37: minor
+  cra-templates-stocky37: minor
+  template-stocky37: minor
