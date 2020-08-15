@@ -1,11 +1,15 @@
 language: node_js
 node_js:
   - lts/*
-# ref: https://gist.github.com/dennisreimann/c2a6ef58544861f7e13762e06e146dac
+
 cache:
   npm: false
   directories:
     - ./.yarn/cache
+
+# required for yarn version check on branches
+git:
+  depth: false
 
 branches:
   only:
@@ -21,6 +25,6 @@ script:
 deploy:
   provider: script
   skip_cleanup: true
-  script: bash scripts/release.sh
+  script: bash bin/release.sh
   on:
     branch: master
