@@ -11,6 +11,9 @@ cache:
 git:
   depth: false
 
+# only build on master & develop branches
+# PRs will also be built if enabled and targetting either of these branches
+# tags will not be built
 branches:
   only:
     - master
@@ -21,10 +24,11 @@ script:
   - yarn ci
   - yarn build:fresh
   - yarn version check
-
+after_success: '[[ "$TRAVIS_BRANCH" == "master" && "$TRAVIS_PULL_REQUEST" == "false" ]] && bash bin/tag.sh'
 deploy:
   provider: script
   skip_cleanup: true
-  script: bash bin/release.sh
+  script: yarn publish
   on:
     branch: master
+    tags: true
