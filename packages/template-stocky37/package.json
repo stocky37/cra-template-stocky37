@@ -31,6 +31,7 @@
 		"history": "^5.0.0",
 		"react": "^16.13.1",
 		"react-dom": "^16.13.1",
+		"react-query": "^2.5.14",
 		"react-router": "^6.0.0-beta.0",
 		"react-router-dom": "^6.0.0-beta.0",
 		"react-scripts": "3.4.1"
@@ -78,7 +79,8 @@
 	},
 	"jest": {
 		"moduleNameMapper": {
-			"^components(/.*)$": "<rootDir>/src/components$1"
+			"^components(/.*)$": "<rootDir>/src/components$1",
+			"^util(/.*)$": "<rootDir>/src/util$1"
 		}
 	},
 	"lint-staged": {

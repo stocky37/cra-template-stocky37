@@ -1,19 +1,11 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {useParams} from 'react-router';
+import {Names} from 'util/api';
 
 const Hello = () => {
 	const {nameId} = useParams();
-	const [name, setName] = useState(undefined);
-
-	useEffect(() => {
-		fetch(`http://localhost:8080/names/${nameId}`)
-			.then((res) => res.json())
-			.then((json) => {
-				setName(json.name);
-			});
-	}, [nameId]);
-
-	return <p>Hello, {name || nameId}!</p>;
+	const {data: name} = Names.get(nameId);
+	return <p>Hello, {name ? name.name : nameId}!</p>;
 };
 
 Hello.whyDidYouRender = true;

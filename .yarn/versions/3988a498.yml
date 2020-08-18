@@ -1,2 +1,3 @@
-declined:
-  - cra-templates-stocky37
+releases:
+  cra-templates-stocky37: patch
+  template-stocky37: minor

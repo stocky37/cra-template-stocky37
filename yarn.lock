@@ -12464,6 +12464,17 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"react-query@npm:^2.5.14":
+  version: 2.5.14
+  resolution: "react-query@npm:2.5.14"
+  dependencies:
+    ts-toolbelt: ^6.9.4
+  peerDependencies:
+    react: ^16.8.0
+  checksum: 0bcdf5103f3e2f964775dc489247cbb2ba5d4bcb46d466d8d0265b53387bdb1fd3b645377d4a3eff5db85bab45a2052b984c85997df24df9c5cc4e78d0f8ba05
+  languageName: node
+  linkType: hard
+
 "react-router-dom@npm:^6.0.0-beta.0":
   version: 6.0.0-beta.0
   resolution: "react-router-dom@npm:6.0.0-beta.0"
@@ -14378,6 +14389,7 @@ resolve@1.1.7:
     pretty-quick: ^2.0.1
     react: ^16.13.1
     react-dom: ^16.13.1
+    react-query: ^2.5.14
     react-router: ^6.0.0-beta.0
     react-router-dom: ^6.0.0-beta.0
     react-scripts: 3.4.1
@@ -14629,6 +14641,13 @@ resolve@1.1.7:
     typescript:
       optional: true
   checksum: 0c1ab7d1b85820a4ad12d25f18e6e9b68e57095412cb436266e8d0c58508892d871cd6d39512701e1117b0ad6354f0596d7f9ef9a0e630538ef3c7ff1970e0ef
+  languageName: node
+  linkType: hard
+
+"ts-toolbelt@npm:^6.9.4":
+  version: 6.15.5
+  resolution: "ts-toolbelt@npm:6.15.5"
+  checksum: d2f585ee3439ae7a72dd7c00630491195b2a4f34107c595d567242482b9fa911b5a9b5921fb4984506c2f7d8efce61351c7f48519438df67b6c0a8dcd40c862c
   languageName: node
   linkType: hard
 
