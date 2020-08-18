@@ -1,7 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import {useQuery} from 'react-query';
-
-const API_URL = 'http://localhost:8080';
+import {API_URL} from './env';
 
 const fetcher = (path) => fetch(`${API_URL}/${path}`).then((res) => res.json());
 
