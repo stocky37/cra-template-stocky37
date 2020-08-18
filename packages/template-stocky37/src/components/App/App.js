@@ -2,7 +2,7 @@ import './App.css';
 
 import Hello from 'components/Hello';
 import React from 'react';
-import {Route, Routes} from 'react-router';
+import {Route, Routes} from 'react-router-dom';
 
 import logo from './logo.svg';
 
