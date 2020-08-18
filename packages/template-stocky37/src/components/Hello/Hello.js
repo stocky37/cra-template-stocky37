@@ -4,8 +4,8 @@ import {Names} from 'util/api';
 
 const Hello = () => {
 	const {nameId} = useParams();
-	const {data: name} = Names.get(nameId);
-	return <p>Hello, {name ? name.name : nameId}!</p>;
+	const {isLoading, data: name} = Names.get(nameId);
+	return <p>Hello, {isLoading ? nameId : name.name}!</p>;
 };
 
 Hello.whyDidYouRender = true;
