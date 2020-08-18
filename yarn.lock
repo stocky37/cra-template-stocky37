@@ -2130,7 +2130,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/minimatch@npm:*, @types/minimatch@npm:^3.0.3":
+"@types/minimatch@npm:*":
   version: 3.0.3
   resolution: "@types/minimatch@npm:3.0.3"
   checksum: 672ccdac197e8176eed1a9441d0caf8a29a90eb139b1cefdd4c9e71b1c48f5c749f5d101a2d85da15c6259214ebda95072835021407d60330a731a2672964b82
@@ -2863,13 +2863,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"array-differ@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "array-differ@npm:3.0.0"
-  checksum: 6d87a752b56b9e9b29b617d7092173ac3b418d77621077eb7d7637a143b8df6019d59fe98cb3ba8ceba2677ad9904220dabd816f762c1cd5afaa3eec14db3b92
-  languageName: node
-  linkType: hard
-
 "array-equal@npm:^1.0.0":
   version: 1.0.0
   resolution: "array-equal@npm:1.0.0"
@@ -2911,13 +2904,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"array-union@npm:^2.1.0":
-  version: 2.1.0
-  resolution: "array-union@npm:2.1.0"
-  checksum: 93af542eb854bf62a742192d0061c82788a963a9a6594628f367388f2b9f1bfd9215910febbbdd55074841555d8b59bda6a13ecba4a8e136f58b675499eda292
-  languageName: node
-  linkType: hard
-
 "array-uniq@npm:^1.0.1":
   version: 1.0.3
   resolution: "array-uniq@npm:1.0.3"
@@ -2946,13 +2932,6 @@ __metadata:
   version: 1.0.1
   resolution: "arrify@npm:1.0.1"
   checksum: f1d3bae819f49f51a09da5f5c5ce282e79ca69bbdb32db1d9f6c62b151ef801b74398d007cfe89686e2c5aeb62576a398b9068e5172b7f4e20157aa3284076d3
-  languageName: node
-  linkType: hard
-
-"arrify@npm:^2.0.1":
-  version: 2.0.1
-  resolution: "arrify@npm:2.0.1"
-  checksum: 2a19726815590d829e07998aefa2c352bd9061e58bf4391ffffa227129995841a710bef2d8b4c9408a6b0679d96c96bd23764bdbcc29bb21666c976816093972
   languageName: node
   linkType: hard
 
@@ -4610,7 +4589,6 @@ __metadata:
     lint-staged: ^10.2.11
     prettier: ^2.0.5
     prettier-package-json: ^2.1.3
-    pretty-quick: ^2.0.1
   languageName: unknown
   linkType: soft
 
@@ -6188,23 +6166,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"execa@npm:^2.1.0":
-  version: 2.1.0
-  resolution: "execa@npm:2.1.0"
-  dependencies:
-    cross-spawn: ^7.0.0
-    get-stream: ^5.0.0
-    is-stream: ^2.0.0
-    merge-stream: ^2.0.0
-    npm-run-path: ^3.0.0
-    onetime: ^5.1.0
-    p-finally: ^2.0.0
-    signal-exit: ^3.0.2
-    strip-final-newline: ^2.0.0
-  checksum: feed94b80eaeed8e1dde1a9c67aa08ae9846d88dac00c41d12e5c00e2b2905e07bef7724c2fed4ced7e59f09ebe1ffbc0eff2f3b1385cf7df24fc623f11a616a
-  languageName: node
-  linkType: hard
-
 "execa@npm:^4.0.1":
   version: 4.0.3
   resolution: "execa@npm:4.0.3"
@@ -7562,7 +7523,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"ignore@npm:^5.1.4, ignore@npm:^5.1.8":
+"ignore@npm:^5.1.8":
   version: 5.1.8
   resolution: "ignore@npm:5.1.8"
   checksum: b08e3d5b5d94eca13475f29a5d47d221060e9cdd7e38d7647088e29d90130669a970fecbc4cdb41b8fa295c6673740c729d3dc05dadc381f593efb42282cbf9f
@@ -9971,13 +9932,6 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"mri@npm:^1.1.4":
-  version: 1.1.6
-  resolution: "mri@npm:1.1.6"
-  checksum: 87a09465063063da6d69d98ac75a6206a597c7533561c74e8aab5e6490ebe2a0e94c583fb6e02429e1f4291286a9549eb6a9699c83f5bad252c2c9b4eada97da
-  languageName: node
-  linkType: hard
-
 "ms@npm:2.0.0":
   version: 2.0.0
   resolution: "ms@npm:2.0.0"
@@ -10015,19 +9969,6 @@ fsevents@^1.2.7:
   bin:
     multicast-dns: cli.js
   checksum: 3a67f9a155f32a543e06ebc058cea63d8ee3122f652289cfc91ec24bf7450433a21a017640852e65f1548d4bcca2b8bd10c3d201e56f66945dc1f2554a7e7939
-  languageName: node
-  linkType: hard
-
-"multimatch@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "multimatch@npm:4.0.0"
-  dependencies:
-    "@types/minimatch": ^3.0.3
-    array-differ: ^3.0.0
-    array-union: ^2.1.0
-    arrify: ^2.0.1
-    minimatch: ^3.0.4
-  checksum: c1ba3c9b68e7840cdb4d5d2998eeb68a88ef14a09ce03bd392738529665147a6ec6970d8bf9e7fbac618bb58c2a615f190c048f97c290e36fb4890a3ef78991e
   languageName: node
   linkType: hard
 
@@ -10289,15 +10230,6 @@ fsevents@^1.2.7:
   dependencies:
     path-key: ^2.0.0
   checksum: 0a1bc9a1e0faa7e54a011929b830121d5da393f50cbe37c83f3ffd67781b6d176739ba6e8eab5d56faa05738a60f7eb50389673767db0dc887073932f80b9b60
-  languageName: node
-  linkType: hard
-
-"npm-run-path@npm:^3.0.0":
-  version: 3.1.0
-  resolution: "npm-run-path@npm:3.1.0"
-  dependencies:
-    path-key: ^3.0.0
-  checksum: 52260837a214c88e5424dec66344b1c3f0b7e374cdea82158885998845d7a9fb16bff46d8d13bad4bed39aae5365d81e0bd56e0c347446a9db5b5c167e8b7892
   languageName: node
   linkType: hard
 
@@ -10663,13 +10595,6 @@ fsevents@^1.2.7:
   version: 1.0.0
   resolution: "p-finally@npm:1.0.0"
   checksum: 01f49b2d9c67573b3a1cb253cd9e1ecf5c912b6ba5de8824118bbc8d647bfa6296820b5a536e91ec68a54395d4e1c58de9a381ded3b688074fb446a8fe351931
-  languageName: node
-  linkType: hard
-
-"p-finally@npm:^2.0.0":
-  version: 2.0.1
-  resolution: "p-finally@npm:2.0.1"
-  checksum: d90a9b6b51e2cee60131564b279e4ebaf92c2b05f1afb35477b8a1b7eb77b9c4d6d8c5dac329b45fc85b0efcfdf3a2047279dedb4c1e83fd3fd24eefa3439cfe
   languageName: node
   linkType: hard
 
@@ -12099,24 +12024,6 @@ fsevents@^1.2.7:
     ansi-styles: ^4.0.0
     react-is: ^16.12.0
   checksum: f7cc631d51e22c809d429d20facfd886ba0b212d419d153467872f68688256c2c55563bf70e943b7347ec9180b41a1d19c4235dc171850f9d5382a52959c0245
-  languageName: node
-  linkType: hard
-
-"pretty-quick@npm:^2.0.1":
-  version: 2.0.1
-  resolution: "pretty-quick@npm:2.0.1"
-  dependencies:
-    chalk: ^2.4.2
-    execa: ^2.1.0
-    find-up: ^4.1.0
-    ignore: ^5.1.4
-    mri: ^1.1.4
-    multimatch: ^4.0.0
-  peerDependencies:
-    prettier: ">=1.8.0"
-  bin:
-    pretty-quick: ./bin/pretty-quick.js
-  checksum: 96b2e125e99d980ab2210fea56d92e01f194e4cd0efbac1c6f2c115283faa80415395ac1f9979a3a8b43e475fc5e155ef2e01445889bb18bd20e10a08a50bb36
   languageName: node
   linkType: hard
 
@@ -14386,7 +14293,6 @@ resolve@1.1.7:
     lint-staged: ^10.2.11
     prettier: ^2.0.5
     prettier-package-json: ^2.1.3
-    pretty-quick: ^2.0.1
     react: ^16.13.1
     react-dom: ^16.13.1
     react-query: ^2.5.14
